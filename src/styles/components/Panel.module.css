@@ -1,0 +1,28 @@
+.panelContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #f9f9f9;
+	border-radius: 2px;
+	display: flex;
+	padding: 2rem;
+	width: 100%;
+	max-width: 1536px;
+	position: relative;
+}
+
+.panelBody {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.title {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+}
