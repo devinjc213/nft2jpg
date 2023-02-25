@@ -1,10 +1,9 @@
 .headerContainer {
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
-	padding-left: 2rem;
-	padding-top: 1rem;
+	justify-content: space-between;
 	margin-bottom: 2rem;
+	padding: 1rem 4rem;
 }
 
 .cyanSpan {
@@ -18,4 +17,12 @@
   letter-spacing: -0.025em;
   margin: 0;
   color: white;
+}
+
+.links {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	color: white;
+	font-weight: 700;
 }

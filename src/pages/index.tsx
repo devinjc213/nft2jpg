@@ -19,9 +19,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-				<Panel title="Collections">
+				<Panel>
 					{collection && collection.nfts.map((nft, index) => (
-						<NftContainer nft={nft} />
+						<NftContainer nft={nft} key={index} />
 					))}
 				</Panel>
       </main>
