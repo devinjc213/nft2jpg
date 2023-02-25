@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./index.module.css";
 import { type NextPage } from "next";
 import Head from "next/head";
@@ -7,9 +8,18 @@ import { api } from "~/utils/api";
 import Panel from "../components/Panel";
 import { useFetchCollection } from "../hooks/useFetchCollection";
 import NftContainer from "../components/NftContainer";
+import { collections } from "~/utils/collections";
+
+type TabType = {
+	name: string
+	contractAddress: string
+}
 
 const Home: NextPage = () => {
-	const collection = useFetchCollection("0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D");
+	const [activeTab, setActiveTab] = useState<TabType>(collections[0] ?? { name: "", contractAddress: "" });
+	
+	const collection = useFetchCollection(activeTab.contractAddress);
+
 	console.log(collection);
   return (
     <>
@@ -20,9 +30,23 @@ const Home: NextPage = () => {
       </Head>
       <main className={styles.main}>
 				<Panel>
-					{collection && collection.nfts.map((nft, index) => (
-						<NftContainer nft={nft} key={index} />
-					))}
+					<div className={styles.tabs}>
+						{collections.map((col, index) => (
+							<span 
+								key={index} 
+								className={activeTab.name === col.name ? styles.active : ''}
+								onClick={() => setActiveTab(col)}
+							>
+								{col.name}
+							</span>
+						))}
+						<hr />
+					</div>
+					<div className={styles.collectionContainer}>
+						{collection && collection.nfts.map((nft, index) => (
+							<NftContainer nft={nft} key={index} />
+						))}
+					</div>
 				</Panel>
       </main>
     </>

@@ -5,7 +5,7 @@ const Header = () => {
 	return (
 		<div className={styles.headerContainer}>
 			<h1 className={styles.title}>
-				<span className={styles.cyanSpan}>nft</span>2jpg
+				<span className={styles.cyanSpan}>nft</span>2png
 			</h1>
 			<div className={styles.links}>
 				<Link href="/browse" legacyBehavior><a>Browse</a></Link>

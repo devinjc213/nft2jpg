@@ -133,3 +133,22 @@
 .loginButton:hover {
   background-color: rgb(255 255 255 / 0.2);
 }
+
+.collectionContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.tabs {
+	width: 100%;
+}
+
+.tabs > span {
+	margin: 0 1rem;
+}
+
+.active {
+	text-decoration: underline;
+}
