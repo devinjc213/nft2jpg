@@ -1,0 +1,28 @@
+.headerContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+	padding: 1rem 4rem;
+}
+
+.cyanSpan {
+  color: hsl(187 100% 69%);
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin: 0;
+  color: white;
+}
+
+.links {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	color: white;
+	font-weight: 700;
+}

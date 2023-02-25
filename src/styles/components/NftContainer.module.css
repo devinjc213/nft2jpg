@@ -1,0 +1,35 @@
+.container {
+}
+
+.imgWrapper > img {
+	max-width: 250px;
+	max-height: 250px;
+	pointer-events: none;
+}
+
+.nftOverlay {
+	border: 1px solid white;
+	padding: 0.5rem 1rem;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	visibility: hidden;
+	font-weight: 700;
+	cursor: pointer;
+	background-image: linear-gradient(45deg, #61edff, #182d59);
+}
+
+.imgWrapper {
+	position: relative;
+}
+
+.imgWrapper:hover > img {
+	filter: blur(4px);
+	cursor: pointer;
+}
+
+.imgWrapper:hover > .nftOverlay {
+	visibility: visible;
+}
