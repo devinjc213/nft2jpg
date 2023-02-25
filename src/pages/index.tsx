@@ -20,7 +20,6 @@ const Home: NextPage = () => {
 	
 	const collection = useFetchCollection(activeTab.contractAddress);
 
-	console.log(collection);
   return (
     <>
       <Head>

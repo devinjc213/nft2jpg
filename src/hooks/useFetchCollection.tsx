@@ -30,6 +30,5 @@ export const useFetchCollection = (collectionAddress: string) => {
 			.catch((err) => console.log(err));
 	}, [collectionAddress]);
 
-	console.log(collection);
 	return collection;
 }
