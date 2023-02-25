@@ -5,7 +5,6 @@ import type { NftContractNftsResponse } from "alchemy-sdk";
 export const useFetchCollection = (collectionAddress: string) => {
 	const [collection, setCollection] = useState<NftContractNftsResponse>();
 	
-	console.log(collectionAddress);
   const config = {
     apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
     network: Network.ETH_MAINNET,
